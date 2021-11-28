@@ -1,5 +1,5 @@
 @import url("https://acutewoof.github.io/minimalist-css-kit/styles/main.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 
 @keyframes text-enter {
   0% {
@@ -20,6 +20,13 @@ h3,
 h4,
 * {
   font-family: "Roboto", sans-serif;
+}
+
+button {
+  font-family: "Roboto";
+  font-weight: 500;
+  padding: 0.9rem 1rem;
+  line-height: 1.2;
 }
 
 main * {
@@ -78,7 +85,7 @@ img {
 @media screen and (max-width: 1000px) {
   .card {
     border-radius: 5px;
-    padding: 10vw;
+    padding: 5vw;
   }
   #what {
     display: none;
@@ -90,5 +97,8 @@ img {
   }
   .dl {
     font-size: 1rem;
+  }
+  .img-holder {
+    padding: 3rem;
   }
 }
