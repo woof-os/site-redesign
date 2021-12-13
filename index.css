@@ -1,5 +1,5 @@
 @import url("https://acutewoof.github.io/minimalist-css-kit/styles/main.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
 @keyframes text-enter {
   0% {
@@ -19,11 +19,11 @@ h2,
 h3,
 h4,
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Kalam", cursive;
 }
 
 button {
-  font-family: "Roboto";
+  font-family: "Kalam";
   font-weight: 500;
   padding: 0.9rem 1rem;
   line-height: 1.2;
