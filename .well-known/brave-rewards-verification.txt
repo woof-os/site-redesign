@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: woof-os.github.io
+Token: 5c0cc497978621e1283fe7740c438e1b87aebfe3de7c3cab77a78ad0ab76af16
