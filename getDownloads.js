@@ -6,10 +6,16 @@ function getQtileDLs() {
     const data = JSON.parse(this.response);
     let dls = 0;
     const dlCount = document.getElementById("qtile-dl-count");
+
     for (let i in data) {
-      let assets = data[i].assets;
-      dls = assets[0].download_count + dls;
-      dlCount.innerHTML = dls;
+      try {
+
+        let assets = data[i].assets;
+        dls = assets[0].download_count + dls;
+        dlCount.innerHTML = dls;
+
+      } catch (error) {
+      }
     }
   };
   xhr.send();
@@ -26,9 +32,14 @@ function getXfceDLs() {
     let dls = 0;
     const dlCount = document.getElementById("xfce-dl-count");
     for (let i in data) {
-      let assets = data[i].assets;
-      dls = assets[0].download_count + dls;
-      dlCount.innerHTML = dls;
+      try {
+
+        let assets = data[i].assets;
+        dls = assets[0].download_count + dls;
+        dlCount.innerHTML = dls;
+      } catch (error) {
+
+      }
     }
   };
   xhr.send();
@@ -44,18 +55,33 @@ function redirectQtile() {
   xhr.open("GET", url, true);
   xhr.onload = function () {
     const data = JSON.parse(this.response);
-    window.location.href = data[0].assets[0].browser_download_url;
-  };
+    for (let i in data) {
+      try {
+        window.location.href = data[i].assets[0].browser_download_url;
+      } catch (error) {
+
+      }
+    };
+  }
+
   xhr.send();
-}
+};
 
 function redirectXfce4() {
   const xhr = new XMLHttpRequest();
   const url = "https://api.github.com/repos/woof-os/isos-xfce4/releases";
   xhr.open("GET", url, true);
   xhr.onload = function () {
-    const data = JSON.parse(this.response);
-    window.location.href = data[0].assets[0].browser_download_url;
+
+  const data = JSON.parse(this.response);
+    for (let i in data) {
+      try {
+
+        window.location.href = data[i].assets[0].browser_download_url;
+      } catch (error) {
+
+      }
+    }
   };
   xhr.send();
 }
