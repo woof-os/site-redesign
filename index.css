@@ -1,5 +1,6 @@
 @import url("https://acutewoof.github.io/minimalist-css-kit/styles/main.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('./gagalin.otf');
 
 @keyframes text-enter {
   0% {
@@ -17,7 +18,9 @@ body {
 h1,
 h2,
 h3,
-h4,
+h4 {
+  font-family: "Gagalin", sans-serif;
+}
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -36,7 +39,7 @@ main * {
 
 .img-holder {
   background-color: var(--nord0);
-  background-image: url("https://acutewoof.github.io/wall.jpg");
+  background-image: url("https://wallpaperaccess.com/full/757671.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,8 +57,9 @@ main * {
 
 #woof-os-h1 {
   font-size: 5rem;
-  color: var(--nord3);
+  color: var(--nord10);
   transition: 300ms all ease-in-out;
+  text-shadow: 5px 4px 5px var(--nord3);
 }
 
 .center-div {
