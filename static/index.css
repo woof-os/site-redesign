@@ -1,0 +1,102 @@
+@import url("https://acutewoof.github.io/minimalist-css-kit/styles/main.css");
+@import url("./nord.css");
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@300;400;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  font-family: Arvo, Roboto, sans-serif;
+  text-align: justify;
+  box-shadow: none;
+}
+
+hr {
+  border-color: var(--nord10);
+  border-style: solid;
+}
+
+body {
+  background-image: url("./wall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.card {
+  box-shadow: 0px 0px 0px var(--nord1);
+  padding: 5%;
+  margin: 0;
+  height: 55vh;
+  width: 55vw;
+  background: none;
+}
+
+.icon-and-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.logo {
+  height: 90%;
+}
+
+button.circular {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  box-shadow: none;
+  text-align: center;
+  background-size: contain;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button#yt {
+  background-image: url("icons/youtube.png");
+}
+
+button#gh {
+  background-image: url("icons/github.png");
+}
+
+button#dc {
+  background-image: url("icons/discord.png");
+}
+
+main {
+  width: fit-content;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2E344030;
+}
+
+a.button:hover {
+    text-decoration: none;
+    color: none;
+    background-color: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-and-content {
+	  display: block
+  }
+  .logo {
+	  display: none
+  }
+}
