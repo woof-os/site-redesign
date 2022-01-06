@@ -92,7 +92,7 @@ a.button:hover {
     background-color: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .icon-and-content {
 	  display: block
   }
