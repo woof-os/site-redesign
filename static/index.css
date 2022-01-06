@@ -83,20 +83,30 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #2E344030;
+  background-color: #2e344030;
 }
 
 a.button:hover {
-    text-decoration: none;
-    color: none;
-    background-color: none;
+  text-decoration: none;
+  color: none;
+  background-color: none;
+}
+
+.logo-container.mobile {
+  display: none;
 }
 
 @media only screen and (max-width: 800px) {
   .icon-and-content {
-	  display: block
+    display: block;
+  }
+  .logo-container {
+    display: none;
+  }
+  .logo-container.mobile {
+    display: block;
   }
   .logo {
-	  display: none
+    height: 50%;
   }
 }

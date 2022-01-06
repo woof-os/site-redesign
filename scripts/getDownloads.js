@@ -9,13 +9,10 @@ function getQtileDLs() {
 
     for (let i in data) {
       try {
-
         let assets = data[i].assets;
         dls = assets[0].download_count + dls;
         dlCount.innerHTML = dls;
-
-      } catch (error) {
-      }
+      } catch (error) {}
     }
   };
   xhr.send();
@@ -33,13 +30,10 @@ function getXfceDLs() {
     const dlCount = document.getElementById("xfce-dl-count");
     for (let i in data) {
       try {
-
         let assets = data[i].assets;
         dls = assets[0].download_count + dls;
         dlCount.innerHTML = dls;
-      } catch (error) {
-
-      }
+      } catch (error) {}
     }
   };
   xhr.send();
@@ -58,29 +52,23 @@ function redirectQtile() {
     for (let i in data) {
       try {
         window.location.href = data[i].assets[0].browser_download_url;
-      } catch (error) {
-
-      }
-    };
-  }
+      } catch (error) {}
+    }
+  };
 
   xhr.send();
-};
+}
 
 function redirectXfce4() {
   const xhr = new XMLHttpRequest();
   const url = "https://api.github.com/repos/woof-os/isos-xfce4/releases";
   xhr.open("GET", url, true);
   xhr.onload = function () {
-
-  const data = JSON.parse(this.response);
+    const data = JSON.parse(this.response);
     for (let i in data) {
       try {
-
         window.location.href = data[i].assets[0].browser_download_url;
-      } catch (error) {
-
-      }
+      } catch (error) {}
     }
   };
   xhr.send();
