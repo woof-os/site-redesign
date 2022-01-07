@@ -96,6 +96,23 @@ a.button:hover {
   display: none;
 }
 
+.scroll {
+  overflow: auto;
+  height: 55vh;
+  max-height: 55vh;
+  max-width: 55vw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  padding-right: 10%;
+}
+
 @media only screen and (max-width: 800px) {
   .icon-and-content {
     display: block;
@@ -107,6 +124,34 @@ a.button:hover {
     display: block;
   }
   .logo {
-    height: 50%;
+    height: 30%;
+  }
+  .card {
+    height: 90vh;
+    width: 90vw;
+    max-height: 90vh;
+    max-width: 90vw;
+    text-align: center;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  * {
+    text-align: center;
+  }
+  .scroll {
+    max-width: 90vw;
+    overflow: auto;
+  }
+  .content-ultra-padding {
+    padding: 0;
+  }
+  body {
+    overflow: auto;
+  }
+  p {
+    padding-right: 0;
   }
 }
