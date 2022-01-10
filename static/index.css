@@ -113,6 +113,18 @@ p {
   padding-right: 10%;
 }
 
+.ss-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ss {
+  width: 100%;
+  height: fit-content;
+}
+
 @media only screen and (max-width: 800px) {
   .icon-and-content {
     display: block;
