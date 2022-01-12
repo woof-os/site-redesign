@@ -1,6 +1,6 @@
 @import url("https://acutewoof.github.io/minimalist-css-kit/styles/main.css");
 @import url("./nord.css");
-@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 h1,
 h2,
@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 * {
-  font-family: Arvo, Roboto, sans-serif;
+  font-family: Rubik, Roboto, sans-serif;
   text-align: justify;
   box-shadow: none;
 }
@@ -125,6 +125,38 @@ p {
   height: fit-content;
 }
 
+footer {
+  background-color: #00000000;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: unset;
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+}
+
+footer * {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--nord4);
+}
+
+footer span a:hover i {
+  text-decoration: none;
+  background-color: #00000000;
+  color: var(--nord10);
+}
+
+footer a:hover {
+  text-decoration: none;
+  background-color: #00000000;
+  color: var(--nord10);
+}
+
 @media only screen and (max-width: 800px) {
   .icon-and-content {
     display: block;
@@ -165,5 +197,14 @@ p {
   }
   p {
     padding-right: 0;
+  }
+  footer {
+    grid-gap: 0.5rem;
+  }
+  .desktop {
+    display: none;
+  }
+  footer {
+    max-height: 20vh;
   }
 }
