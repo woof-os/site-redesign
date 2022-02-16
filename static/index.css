@@ -50,31 +50,7 @@ body {
 
 .logo {
   height: 90%;
-}
-
-button.circular {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  box-shadow: none;
-  text-align: center;
-  background-size: contain;
-  background-origin: content-box;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-button#yt {
-  background-image: url("icons/youtube.png");
-}
-
-button#gh {
-  background-image: url("icons/github.png");
-}
-
-button#dc {
-  background-image: url("icons/discord.png");
+  box-shadow: 0px 0px 10px var(--nord1);
 }
 
 main {
@@ -83,7 +59,6 @@ main {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #2e344030;
 }
 
 a.button:hover {
