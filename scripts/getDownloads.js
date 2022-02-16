@@ -1,6 +1,6 @@
 function getQtileDLs() {
   const xhr = new XMLHttpRequest();
-  const url = "https://api.github.com/repos/woof-os/isos-qtile/releases";
+  const url = "https://api.github.com/repos/obsproject/obs-studio/releases";
   xhr.open("GET", url, true);
   xhr.onload = function () {
     const data = JSON.parse(this.response);
@@ -10,7 +10,9 @@ function getQtileDLs() {
     for (let i in data) {
       try {
         let assets = data[i].assets;
-        dls = assets[0].download_count + dls;
+        for (x in assets) {
+          dls = assets[x].download_count + dls;
+        }
         dlCount.innerHTML = dls;
       } catch (error) {}
     }
